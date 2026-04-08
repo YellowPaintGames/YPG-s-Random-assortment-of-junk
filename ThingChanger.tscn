@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbtsi05udttx7"]
+
+[ext_resource type="Script" uid="uid://bgr6sglqr6j23" path="res://thing_changer.gd" id="1_ga8r7"]
+
+[node name="ThingChanger" type="Node"]
+script = ExtResource("1_ga8r7")

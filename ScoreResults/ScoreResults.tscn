@@ -1,0 +1,208 @@
+[gd_scene load_steps=13 format=3 uid="uid://batyenwjex13d"]
+
+[ext_resource type="Script" uid="uid://c5rtleilefc0v" path="res://ScoreResults/score_results.gd" id="1_0cfy7"]
+[ext_resource type="Texture2D" uid="uid://8wnv6lntpsg4" path="res://ScoreResults/Scared.png" id="2_avcm3"]
+[ext_resource type="Script" uid="uid://8txn24prm7bi" path="res://ScoreResults/scared.gd" id="3_f73xe"]
+[ext_resource type="Texture2D" uid="uid://cdpv66b86dkrh" path="res://ScoreResults/eyes.png" id="4_avcm3"]
+[ext_resource type="Texture2D" uid="uid://bmhso7fseh71h" path="res://ScoreResults/nails.png" id="5_8g3af"]
+[ext_resource type="VideoStream" uid="uid://kb8vplxtej5y" path="res://ScoreResults/explosion-deltarune.ogv" id="5_f73xe"]
+[ext_resource type="Texture2D" uid="uid://5tcsn74vqkw2" path="res://ScoreResults/scream.png" id="6_3t6np"]
+[ext_resource type="AudioStream" uid="uid://dx54aihaajryt" path="res://ScoreResults/Alien Hominid Music - Score Results [wIqlDwzQ-8Q].mp3" id="8_772ky"]
+[ext_resource type="AudioStream" uid="uid://b7oeeroc8j4op" path="res://ScoreResults/lbp-scream_5kqSf5b.mp3" id="9_mu5r6"]
+[ext_resource type="AudioStream" uid="uid://corbl7tiobd5f" path="res://ScoreResults/deltarune explosion greenscreen.mp3" id="10_mu5r6"]
+[ext_resource type="AudioStream" uid="uid://dc5gkc2ulibeh" path="res://ScoreResults/Ding Sound Effect.mp3" id="11_avueq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3t6np"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+spread = 180.0
+initial_velocity_min = 405.88
+initial_velocity_max = 488.22998
+gravity = Vector3(0, 600, 0)
+linear_accel_min = -67.06
+linear_accel_max = -55.29
+radial_accel_min = -100.0
+radial_accel_max = -57.65
+damping_min = 91.176
+damping_max = 100.00001
+scale_min = 0.099999994
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0cfy7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 590.0
+offset_bottom = 652.0
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 517.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 61
+text = "SCORE RESULTS: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accuracy" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 121.0
+offset_right = 162.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 31
+text = "Accuracy: "
+
+[node name="Label" type="Label" parent="Panel/Accuracy"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 3.4110003
+anchor_bottom = 1.136
+offset_right = -0.061035156
+offset_bottom = 0.01599884
+theme_override_font_sizes/font_size = 36
+text = "0"
+vertical_alignment = 1
+
+[node name="Health_Bonus" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 242.0
+offset_right = 162.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 31
+text = "Health Bonus: "
+
+[node name="Label" type="Label" parent="Panel/Health_Bonus"]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 582.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 36
+text = "0"
+vertical_alignment = 1
+
+[node name="Style" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 387.0
+offset_right = 162.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 31
+text = "Style: "
+
+[node name="Label" type="Label" parent="Panel/Style"]
+layout_mode = 0
+offset_left = 93.0
+offset_right = 457.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 36
+text = "0"
+vertical_alignment = 1
+
+[node name="Total" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 516.0
+offset_right = 154.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 31
+text = "Total: "
+
+[node name="Label" type="Label" parent="Panel/Total"]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 465.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 36
+text = "0"
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(870, 335)
+
+[node name="Scared" type="Sprite2D" parent="Node2D"]
+position = Vector2(6.1035156e-05, 0)
+scale = Vector2(1.660079, 1.8857567)
+texture = ExtResource("2_avcm3")
+script = ExtResource("3_f73xe")
+
+[node name="Eyes" type="Sprite2D" parent="Node2D/Scared"]
+position = Vector2(0, -69.99842)
+scale = Vector2(0.14713326, 0.15460268)
+texture = ExtResource("4_avcm3")
+flip_h = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(0, -72)
+amount = 19
+texture = ExtResource("5_8g3af")
+lifetime = 5.0
+speed_scale = 9.58
+process_material = SubResource("ParticleProcessMaterial_3t6np")
+
+[node name="scream" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(21.999985, 53)
+scale = Vector2(1.9576375, 2.1186943)
+texture = ExtResource("6_3t6np")
+script = ExtResource("3_f73xe")
+shake = 10
+
+[node name="Explosion" type="VideoStreamPlayer" parent="."]
+offset_left = 590.0
+offset_top = 122.0
+offset_right = 638.0
+offset_bottom = 170.0
+stream = ExtResource("5_f73xe")
+
+[node name="Explosion2" type="VideoStreamPlayer" parent="."]
+offset_left = 590.0
+offset_top = 252.0
+offset_right = 638.0
+offset_bottom = 300.0
+stream = ExtResource("5_f73xe")
+
+[node name="Explosion3" type="VideoStreamPlayer" parent="."]
+offset_left = 590.0
+offset_top = 388.0
+offset_right = 638.0
+offset_bottom = 436.0
+stream = ExtResource("5_f73xe")
+
+[node name="Explosion4" type="VideoStreamPlayer" parent="."]
+offset_left = 590.0
+offset_top = 517.0
+offset_right = 638.0
+offset_bottom = 565.0
+stream = ExtResource("5_f73xe")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_772ky")
+autoplay = true
+
+[node name="screech" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mu5r6")
+
+[node name="Explosion5" type="VideoStreamPlayer" parent="."]
+offset_left = 590.0
+offset_right = 1165.0
+offset_bottom = 652.0
+stream = ExtResource("5_f73xe")
+expand = true
+
+[node name="KABOOM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_mu5r6")
+
+[node name="Ding" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_avueq")
+volume_db = -10.807
+
+[connection signal="finished" from="Explosion" to="." method="_on_explosion_finished"]
+[connection signal="finished" from="Explosion2" to="." method="_on_explosion_2_finished"]
+[connection signal="finished" from="Explosion3" to="." method="_on_explosion_3_finished"]
+[connection signal="finished" from="Explosion4" to="." method="_on_explosion_4_finished"]
+[connection signal="finished" from="screech" to="." method="_on_screech_finished"]

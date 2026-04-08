@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=3 uid="uid://cj3cldcqldd5y"]
+
+[ext_resource type="Script" uid="uid://dc2m6c63h58gf" path="res://Train/Train.gd" id="1_ftc4i"]
+[ext_resource type="Texture2D" uid="uid://d87kecn7kcty" path="res://Train/subwayempty.png" id="2_504xh"]
+[ext_resource type="Texture2D" uid="uid://dputcxrmoj7nw" path="res://Train/TrainTopidk.png" id="3_claki"]
+[ext_resource type="Texture2D" uid="uid://b1se06sa355m5" path="res://Train/balck.png" id="4_3l02v"]
+[ext_resource type="Texture2D" uid="uid://7lsvbb4m4hp2" path="res://Train/trainwheel.png" id="5_caxw3"]
+[ext_resource type="Texture2D" uid="uid://cpeb4kl3ij4y1" path="res://Train/TrainShaftthingy.png" id="6_xc2h4"]
+[ext_resource type="Texture2D" uid="uid://bjijp0dqbnoq1" path="res://Train/mountains.png" id="7_claki"]
+[ext_resource type="Texture2D" uid="uid://cy5uwj8fbge53" path="res://Train/sky.jpeg" id="8_3l02v"]
+[ext_resource type="Texture2D" uid="uid://3hny16gbr84d" path="res://Train/Telephone pole.png" id="9_3l02v"]
+[ext_resource type="Texture2D" uid="uid://cvpedy70b1fis" path="res://Train/LampPost.png" id="11_cssju"]
+[ext_resource type="AudioStream" uid="uid://bb5k2tphgt8jw" path="res://Train/Madness Combat 6 Soundtrack_ Cheshyre - Train Madness.mp3" id="11_xc2h4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ftc4i")
+
+[node name="Background" type="Parallax2D" parent="."]
+z_index = -325
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-1000, 0)
+
+[node name="Mountains" type="Sprite2D" parent="Background"]
+position = Vector2(572, 417)
+scale = Vector2(1.242246, 1.4743592)
+texture = ExtResource("7_claki")
+
+[node name="Sky" type="Sprite2D" parent="Background"]
+z_index = -45
+position = Vector2(571.50006, 325)
+scale = Vector2(4.2290907, 3.5519128)
+texture = ExtResource("8_3l02v")
+
+[node name="ThingsthatAreCloser" type="Parallax2D" parent="."]
+z_index = -75
+repeat_size = Vector2(4608, 0)
+autoscroll = Vector2(-4000, 0)
+
+[node name="TelephonePole" type="Sprite2D" parent="ThingsthatAreCloser"]
+z_index = -70
+position = Vector2(374.25003, 354.875)
+scale = Vector2(2.0535715, 1.732196)
+texture = ExtResource("9_3l02v")
+
+[node name="LampPost" type="Sprite2D" parent="ThingsthatAreCloser"]
+position = Vector2(2716, 298)
+scale = Vector2(2.23, 1.8813056)
+texture = ExtResource("11_cssju")
+
+[node name="Train" type="Node2D" parent="."]
+
+[node name="Subwayempty" type="Sprite2D" parent="Train"]
+position = Vector2(579.5, 321.125)
+scale = Vector2(1.6652894, 1.9513887)
+texture = ExtResource("2_504xh")
+
+[node name="TrainTopidk" type="Sprite2D" parent="Train"]
+position = Vector2(576.00006, 52)
+scale = Vector2(1.614325, 0.48)
+texture = ExtResource("3_claki")
+
+[node name="Balck" type="Sprite2D" parent="Train"]
+position = Vector2(579, 655)
+scale = Vector2(4.0413795, 1.2471265)
+texture = ExtResource("4_3l02v")
+
+[node name="Trainwheel" type="Sprite2D" parent="Train"]
+position = Vector2(55, 597.375)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="Node2D" type="Node2D" parent="Train/Trainwheel"]
+position = Vector2(9.027267, -141.22273)
+scale = Vector2(3.009091, 3.1824822)
+
+[node name="Trainwheel2" type="Sprite2D" parent="Train"]
+position = Vector2(245.99998, 597)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="TranShaft" type="Node2D" parent="Train"]
+position = Vector2(58, 553)
+
+[node name="TrainShaftthingy" type="Sprite2D" parent="Train/TranShaft"]
+position = Vector2(101.00001, 9.536743e-06)
+rotation = 0.008726646
+scale = Vector2(1.2610924, 1)
+texture = ExtResource("6_xc2h4")
+
+[node name="Trainwheel3" type="Sprite2D" parent="Train"]
+position = Vector2(427.99997, 599)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="Node2D" type="Node2D" parent="Train/Trainwheel3"]
+position = Vector2(9.027267, -141.22273)
+scale = Vector2(3.009091, 3.1824822)
+
+[node name="Trainwheel4" type="Sprite2D" parent="Train"]
+position = Vector2(663.99994, 598)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="TranShaft2" type="Node2D" parent="Train"]
+position = Vector2(431, 555)
+
+[node name="TrainShaftthingy" type="Sprite2D" parent="Train/TranShaft2"]
+position = Vector2(117.90003, 0.14749384)
+rotation = 0.008726646
+scale = Vector2(1.4300991, 1)
+texture = ExtResource("6_xc2h4")
+
+[node name="Trainwheel5" type="Sprite2D" parent="Train"]
+position = Vector2(834, 597)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="Node2D" type="Node2D" parent="Train/Trainwheel5"]
+position = Vector2(9.027267, -141.22273)
+scale = Vector2(3.009091, 3.1824822)
+
+[node name="Trainwheel6" type="Sprite2D" parent="Train"]
+position = Vector2(1088, 596)
+scale = Vector2(0.33232626, 0.31422013)
+texture = ExtResource("5_caxw3")
+
+[node name="TranShaft3" type="Node2D" parent="Train"]
+position = Vector2(837, 553)
+
+[node name="TrainShaftthingy" type="Sprite2D" parent="Train/TranShaft3"]
+position = Vector2(136.65532, 0.31116873)
+rotation = 0.008726646
+scale = Vector2(1.6176592, 1)
+texture = ExtResource("6_xc2h4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_xc2h4")
+autoplay = true

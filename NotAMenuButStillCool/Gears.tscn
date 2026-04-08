@@ -1,0 +1,195 @@
+[gd_scene load_steps=3 format=3 uid="uid://x473drojys35"]
+
+[ext_resource type="Texture2D" uid="uid://cabwe8lac5s5i" path="res://NotAMenuButStillCool/Gear.png" id="1_d8nbf"]
+[ext_resource type="Script" uid="uid://3lvf0qempqjg" path="res://NotAMenuButStillCool/gear.gd" id="2_xn056"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Biggears" type="Node2D" parent="."]
+
+[node name="Gear" type="Sprite2D" parent="Biggears"]
+position = Vector2(178, 171)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 1
+
+[node name="Gear2" type="Sprite2D" parent="Biggears"]
+position = Vector2(406, 409)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -1
+
+[node name="Gear3" type="Sprite2D" parent="Biggears"]
+position = Vector2(686, 241)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 1
+
+[node name="Gear4" type="Sprite2D" parent="Biggears"]
+position = Vector2(916, 467)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -1
+
+[node name="SmallGears" type="Node2D" parent="."]
+modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
+
+[node name="Gear5" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(98, 375)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear6" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(61, 495)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear7" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(196.99998, 456)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear8" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(296, 363)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear9" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(20, 275)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear10" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(267, 561)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear11" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(446, 573)
+scale = Vector2(0.69, 0.69)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 3
+
+[node name="Gear12" type="Sprite2D" parent="SmallGears"]
+modulate = Color(0.973535, 0.9735351, 0.973535, 1)
+z_index = -65
+position = Vector2(561, 371)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear13" type="Sprite2D" parent="SmallGears"]
+position = Vector2(952.99994, 174)
+scale = Vector2(0.685, 0.685)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -3
+
+[node name="Gear14" type="Sprite2D" parent="SmallGears"]
+position = Vector2(420.00003, 93.00001)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 4
+
+[node name="Gear15" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(506.00003, 171)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+
+[node name="Gear16" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(649.00006, 506.99997)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 3
+
+[node name="Gear17" type="Sprite2D" parent="SmallGears"]
+position = Vector2(1107, -84)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 1
+
+[node name="Gear18" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(689, 143)
+scale = Vector2(0.965, 0.965)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -2
+
+[node name="Gear19" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(1170, 390)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 2
+
+[node name="Gear20" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(373, 259)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -3
+
+[node name="Gear21" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(801, 682.00006)
+scale = Vector2(0.815, 0.815)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = -2
+
+[node name="Gear22" type="Sprite2D" parent="SmallGears"]
+z_index = -65
+position = Vector2(160, 125)
+texture = ExtResource("1_d8nbf")
+script = ExtResource("2_xn056")
+spin = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Biggears/Gear" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Biggears/Gear2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Biggears/Gear3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Biggears/Gear4" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear5" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear6" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear7" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear8" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear9" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear10" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear11" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear12" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear13" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear14" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear15" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear16" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear17" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear18" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear19" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear20" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear21" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SmallGears/Gear22" method="_on_timer_timeout"]

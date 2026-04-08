@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=3 uid="uid://jy7uiy8ckh0t"]
+
+[ext_resource type="Script" uid="uid://bgkpipn6ihc1n" path="res://Death (May cause Motion Sickness)/skulls.gd" id="1_vschc"]
+[ext_resource type="Texture2D" uid="uid://bdjtgw37p3uxh" path="res://Death (May cause Motion Sickness)/Skull1.png" id="2_tath6"]
+[ext_resource type="Texture2D" uid="uid://buqbta8p17xka" path="res://Death (May cause Motion Sickness)/Skulls.png" id="3_8gohb"]
+[ext_resource type="Script" uid="uid://htvyjt8yq5xe" path="res://Death (May cause Motion Sickness)/text_controller.gd" id="4_tath6"]
+[ext_resource type="Texture2D" uid="uid://dgmbeup5smxmo" path="res://Death (May cause Motion Sickness)/RITUALS.png" id="5_ujtt2"]
+[ext_resource type="Script" uid="uid://broskjyim30dk" path="res://Death (May cause Motion Sickness)/ritual.gd" id="6_qjigv"]
+[ext_resource type="Script" uid="uid://copamsc3qrlg0" path="res://Death (May cause Motion Sickness)/CoolBibleThingies.gd" id="7_qjigv"]
+[ext_resource type="Texture2D" uid="uid://cpx1h0t08xahk" path="res://Death (May cause Motion Sickness)/balck.png" id="8_ym022"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujtt2"]
+atlas = ExtResource("3_8gohb")
+region = Rect2(0, 0, 262, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjigv"]
+atlas = ExtResource("3_8gohb")
+region = Rect2(262, 0, 262, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym022"]
+atlas = ExtResource("3_8gohb")
+region = Rect2(524, 0, 262, 337)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hmced"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujtt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjigv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym022")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SkullController" type="Node" parent="."]
+script = ExtResource("1_vschc")
+
+[node name="Skull1" type="Sprite2D" parent="SkullController"]
+position = Vector2(820, 352)
+texture = ExtResource("2_tath6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SkullController"]
+visible = false
+position = Vector2(796, 358.00003)
+scale = Vector2(1.2805343, 1.2203265)
+sprite_frames = SubResource("SpriteFrames_hmced")
+
+[node name="Timer" type="Timer" parent="SkullController"]
+one_shot = true
+
+[node name="TextController" type="Node" parent="."]
+script = ExtResource("4_tath6")
+
+[node name="T1" type="RichTextLabel" parent="TextController"]
+modulate = Color(1, 0, 0, 1)
+offset_right = 411.0
+offset_bottom = 158.0
+theme_override_font_sizes/normal_font_size = 116
+bbcode_enabled = true
+text = "THEIR"
+fit_content = true
+
+[node name="T2" type="RichTextLabel" parent="TextController"]
+modulate = Color(1, 0, 0, 1)
+offset_left = 662.0
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 156.0
+theme_override_font_sizes/normal_font_size = 116
+bbcode_enabled = true
+text = "BLOODY"
+fit_content = true
+
+[node name="T3" type="RichTextLabel" parent="TextController"]
+modulate = Color(1, 0, 0, 1)
+offset_left = 366.0
+offset_top = 483.0
+offset_right = 790.0
+offset_bottom = 641.0
+theme_override_font_sizes/normal_font_size = 116
+bbcode_enabled = true
+text = "LIES"
+fit_content = true
+
+[node name="TimerStart" type="Timer" parent="TextController"]
+one_shot = true
+autostart = true
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.8288101, 2.7193873e-06, 5.7756904e-07, 1)
+z_index = -2
+offset_left = -11.0
+offset_top = -13.0
+offset_right = 1165.0
+offset_bottom = 672.0
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(558, 297.00003)
+scale = Vector2(10.275, 10.275)
+script = ExtResource("6_qjigv")
+
+[node name="Rituals" type="Sprite2D" parent="Node2D"]
+position = Vector2(1.999999, 4)
+texture = ExtResource("5_ujtt2")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = 271.0
+offset_right = 1376.0046
+offset_bottom = 373.0
+rotation = -0.567232
+script = ExtResource("7_qjigv")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 798.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 76
+text = "Even though I walk through the darkest valley, I will fear no evil, for you are with me"
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 3.0
+autostart = true
+
+[node name="Balck" type="Sprite2D" parent="Control"]
+z_index = -1
+position = Vector2(522.194, 58.58673)
+scale = Vector2(6.396414, 0.4315158)
+texture = ExtResource("8_ym022")
+
+[node name="Control2" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1449.0
+offset_top = 176.00003
+offset_right = 2880.0046
+offset_bottom = 278.00003
+rotation = -3.726278
+script = ExtResource("7_qjigv")
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 798.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 76
+text = "The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men"
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="Control2"]
+wait_time = 3.0
+autostart = true
+
+[node name="Balck" type="Sprite2D" parent="Control2"]
+z_index = -1
+position = Vector2(685.916, 58.58673)
+scale = Vector2(5.2672963, 0.4315158)
+texture = ExtResource("8_ym022")
+
+[node name="Control3" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 574.00006
+offset_top = -302.00003
+offset_right = 2005.0046
+offset_bottom = -200.00003
+rotation = -5.3145275
+script = ExtResource("7_qjigv")
+
+[node name="Label" type="Label" parent="Control3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 798.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 76
+text = "Thou art my battle axe and weapons of war: for with thee will I break in pieces the nations, and with thee will I destroy kingdoms."
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="Control3"]
+wait_time = 3.0
+autostart = true
+
+[node name="Balck" type="Sprite2D" parent="Control3"]
+z_index = -1
+position = Vector2(685.916, 58.58673)
+scale = Vector2(5.2672963, 0.4315158)
+texture = ExtResource("8_ym022")
+
+[node name="Control4" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 674.00006
+offset_top = 958.0001
+offset_right = 2105.0046
+offset_bottom = 1060.0001
+rotation = -8.377581
+script = ExtResource("7_qjigv")
+
+[node name="Label" type="Label" parent="Control4"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 798.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 76
+text = "For the weapons of our warfare are not carnal, but mighty through God to the pulling down of strongholds."
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="Control4"]
+wait_time = 3.0
+autostart = true
+
+[node name="Balck" type="Sprite2D" parent="Control4"]
+z_index = -1
+position = Vector2(685.916, 58.58673)
+scale = Vector2(5.2672963, 0.4315158)
+texture = ExtResource("8_ym022")
+metadata/_edit_lock_ = true
+
+[connection signal="timeout" from="SkullController/Timer" to="SkullController" method="_on_timer_timeout"]
+[connection signal="timeout" from="TextController/TimerStart" to="TextController" method="_on_timer_start_timeout"]
+[connection signal="timeout" from="Control/Timer" to="Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="Control2/Timer" to="Control2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Control3/Timer" to="Control3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Control4/Timer" to="Control4" method="_on_timer_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dx54aihaajryt"
+path="res://.godot/imported/Alien Hominid Music - Score Results [wIqlDwzQ-8Q].mp3-7db43b6d9f343b316c2ed49465582e75.mp3str"
+
+[deps]
+
+source_file="res://ScoreResults/Alien Hominid Music - Score Results [wIqlDwzQ-8Q].mp3"
+dest_files=["res://.godot/imported/Alien Hominid Music - Score Results [wIqlDwzQ-8Q].mp3-7db43b6d9f343b316c2ed49465582e75.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

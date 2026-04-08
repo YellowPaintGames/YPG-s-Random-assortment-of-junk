@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bal1l4q7pesr"]
+
+[ext_resource type="Texture2D" uid="uid://b6kgvdqbywk1s" path="res://Weird Creature Prototype/icon.svg" id="1_8x7lv"]
+[ext_resource type="Script" uid="uid://c75f650lv1cib" path="res://Weird Creature Prototype/creature.gd" id="1_v0y5u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0y5u"]
+size = Vector2(63, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qwcl"]
+radius = 13.0
+
+[node name="Creature" type="Node2D"]
+script = ExtResource("1_v0y5u")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="P1" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="P1"]
+scale = Vector2(0.49999997, 0.17187499)
+texture = ExtResource("1_8x7lv")
+offset = Vector2(64.00001, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="P1/Body"]
+position = Vector2(62.000015, 0)
+scale = Vector2(2.0000002, 5.8181825)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="P1/Body/StaticBody2D"]
+shape = SubResource("RectangleShape2D_v0y5u")
+
+[node name="Nub1" type="Area2D" parent="P1/Body"]
+position = Vector2(126.00004, 0)
+scale = Vector2(2.0000002, 5.8181825)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="P1/Body/Nub1"]
+shape = SubResource("CircleShape2D_6qwcl")
+
+[node name="Nub2" type="Area2D" parent="P1/Body"]
+position = Vector2(2.670288e-05, 0)
+scale = Vector2(2.0000002, 5.8181825)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="P1/Body/Nub2"]
+shape = SubResource("CircleShape2D_6qwcl")
+
+[node name="P2" type="Node2D" parent="."]
+position = Vector2(63, 0)
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.2578125, 0.25)
+texture = ExtResource("1_8x7lv")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(63, 0)
+scale = Vector2(0.2578125, 0.25)
+texture = ExtResource("1_8x7lv")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="P1/Body/Nub1" to="." method="_on_nub_1_body_entered"]
+[connection signal="body_entered" from="P1/Body/Nub2" to="." method="_on_nub_2_body_entered"]

@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=4 uid="uid://wsd3gqmtxrad"]
+
+[ext_resource type="Texture2D" uid="uid://b6kgvdqbywk1s" path="res://Weird Creature Prototype/icon.svg" id="1_upv0s"]
+[ext_resource type="PackedScene" uid="uid://bal1l4q7pesr" path="res://Weird Creature Prototype/Creature.tscn" id="2_njiv3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_106q5"]
+texture = ExtResource("1_upv0s")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61.983467, -64.462814, 61.15702, -64.46281, 63.636353, 64.462814, -63.63636, 64.46281)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ohh1j"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_106q5")
+
+[node name="Zoo" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAD9//7/AAAAAAAAAAD9/wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD//wYAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAALAAAAAAAAAAAAAAALAP//AAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAADAP//AAAAAAAAAAD8/wYAAAAAAAAAAAD8/wUAAAAAAAAAAAD8/wQAAAAAAAAAAAD8/wMAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wAAAAAAAAAAAAD8////AAAAAAAAAAD8//7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ohh1j")
+
+[node name="Creature" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(1150, 377)
+scale = Vector2(1.62, 1.62)
+r = 2.03
+timetospin = 0.225
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(542, 319)
+zoom = Vector2(0.585, 0.585)
+
+[node name="Creature2" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(573, -60)
+scale = Vector2(3.58, 3.58)
+r = 4.0
+timetospin = 0.1
+
+[node name="Creature3" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(-178, 490)
+scale = Vector2(1.585, 1.585)
+r = -8.125
+timetospin = 6.02
+
+[node name="Creature4" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(1215, -37)
+scale = Vector2(2.43, 2.43)
+r = 8.225
+timetospin = 0.1
+
+[node name="Creature5" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(-309, -60)
+scale = Vector2(4.785, 4.785)
+r = 7.295
+timetospin = 1.585
+
+[node name="Creature6" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(-45, 747.00006)
+scale = Vector2(1.415, 1.415)
+r = 4.0
+timetospin = 0.1
+
+[node name="Creature7" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(667.99994, 555)
+scale = Vector2(2.485, 2.485)
+r = 1.52
+timetospin = 0.84
+
+[node name="Creature8" parent="." instance=ExtResource("2_njiv3")]
+position = Vector2(1177, 747)
+scale = Vector2(1.925, 1.925)
+r = -5.32
+timetospin = 2.645
