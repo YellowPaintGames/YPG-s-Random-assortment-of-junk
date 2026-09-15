@@ -182,10 +182,12 @@ stream = ExtResource("5_f73xe")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_772ky")
+volume_db = -10.161
 autoplay = true
 
 [node name="screech" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_mu5r6")
+volume_db = -10.161
 
 [node name="Explosion5" type="VideoStreamPlayer" parent="."]
 offset_left = 590.0
@@ -196,10 +198,11 @@ expand = true
 
 [node name="KABOOM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_mu5r6")
+volume_db = -10.161
 
 [node name="Ding" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_avueq")
-volume_db = -10.807
+volume_db = -10.161
 
 [connection signal="finished" from="Explosion" to="." method="_on_explosion_finished"]
 [connection signal="finished" from="Explosion2" to="." method="_on_explosion_2_finished"]

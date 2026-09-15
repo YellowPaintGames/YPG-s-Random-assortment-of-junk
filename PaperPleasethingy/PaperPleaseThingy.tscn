@@ -11,12 +11,12 @@ script = ExtResource("1_ucj8p")
 position = Vector2(0, 652)
 
 [node name="ProtocolViolated" type="Sprite2D" parent="Image"]
-visible = false
 position = Vector2(581.99994, 323.99997)
 scale = Vector2(1.0777779, 1.3846153)
 texture = ExtResource("2_ucj8p")
 
 [node name="BartSmallBart2" type="Sprite2D" parent="Image"]
+visible = false
 position = Vector2(582.49994, 324.75)
 scale = Vector2(4.473077, 2.515564)
 texture = ExtResource("2_osu1m")

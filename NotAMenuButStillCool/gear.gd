@@ -3,10 +3,8 @@ extends Sprite2D
 #and timers, makes a "pulse", if that makes sense, to see one or the other, simply remove the "" on the parts 
 #you want to see
 @export var spin = 5
-"""
 func _process(delta: float) -> void:
 	rotation_degrees+=spin
-"""
 """
 func _on_timer_timeout() -> void:
 	var t=create_tween()

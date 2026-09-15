@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxvundpkyd7im"]
+
+[ext_resource type="Script" uid="uid://dpn7tgkus2buc" path="res://SpinThingy/Spinny.gd" id="1_thrta"]
+[ext_resource type="Texture2D" uid="uid://bwh3f007cy2tm" path="res://SpinThingy/Godot.svg" id="2_0crs0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx6a8"]
+size = Vector2(128, 128)
+
+[node name="SpinTest" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("center")]
+position = Vector2(364, 422)
+scale = Vector2(1.77, 0.245)
+script = ExtResource("1_thrta")
+center = NodePath("../Node2D")
+
+[node name="Godot" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_0crs0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_tx6a8")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(939, 73)

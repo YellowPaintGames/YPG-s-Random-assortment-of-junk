@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://c812cf6fkj6l7"]
+
+[ext_resource type="Texture2D" uid="uid://bruk8cx6hvt7o" path="res://BouncyTweens/alien.png" id="1_1rpiv"]
+[ext_resource type="Script" uid="uid://0e70ok3d07lr" path="res://BouncyTweens/silly.gd" id="2_su1yb"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Silly" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(137, 652)
+scale = Vector2(5, 5)
+texture = ExtResource("1_1rpiv")
+offset = Vector2(4.2000027, -24.999992)
+script = ExtResource("2_su1yb")
+
+[node name="Silly2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(414.00003, 651)
+scale = Vector2(5, 5)
+texture = ExtResource("1_1rpiv")
+offset = Vector2(4.399994, -24.59999)
+script = ExtResource("2_su1yb")
+bounceinterval = 0.2
+
+[node name="Silly3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(686, 649.99994)
+scale = Vector2(5, 5)
+texture = ExtResource("1_1rpiv")
+offset = Vector2(3.9999847, -24.999992)
+script = ExtResource("2_su1yb")
+bounceinterval = 0.30000000000000004
+
+[node name="Silly4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(970, 652.00006)
+scale = Vector2(5, 5)
+texture = ExtResource("1_1rpiv")
+offset = Vector2(3.4000092, -25.199997)
+script = ExtResource("2_su1yb")
+bounceinterval = 0.4
+
+[node name="Label" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 117.0
+offset_right = 212.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 221
+text = "1"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 360.0
+offset_top = 117.0
+offset_right = 486.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 221
+text = "2"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 635.0
+offset_top = 117.0
+offset_right = 761.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 221
+text = "3"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 918.0
+offset_top = 117.0
+offset_right = 1044.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 221
+text = "4"

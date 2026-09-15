@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=3 uid="uid://34vxd7o7jmdm"]
+
+[ext_resource type="Texture2D" uid="uid://ei703vqd32f0" path="res://PhysicsPlayer/icon.svg" id="1_5qurf"]
+[ext_resource type="Script" uid="uid://bu3rrt5cdpx3q" path="res://PhysicsPlayer/player.gd" id="1_ixjbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixjbq"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qurf"]
+size = Vector2(89.28, 81.28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwow"]
+size = Vector2(54, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btmjs"]
+size = Vector2(56, 50)
+
+[node name="Player" type="RigidBody2D"]
+mass = 0.4
+gravity_scale = 0.5
+script = ExtResource("1_ixjbq")
+
+[node name="HeadTorso" type="PinJoint2D" parent="."]
+position = Vector2(0, -77)
+node_a = NodePath("../Head")
+node_b = NodePath("..")
+bias = 0.9
+angular_limit_enabled = true
+angular_limit_lower = -1.5707964
+angular_limit_upper = 1.5707964
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-2.3841858e-07, -1.4901161e-07)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 550
+shape = SubResource("RectangleShape2D_ixjbq")
+
+[node name="Head" type="RigidBody2D" parent="."]
+position = Vector2(0, -115)
+mass = 0.1
+gravity_scale = 0.1
+
+[node name="Icon" type="Sprite2D" parent="Head"]
+position = Vector2(-1.9073486e-06, -14.719996)
+scale = Vector2(0.6875, 0.6293749)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+z_index = 550
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_5qurf")
+
+[node name="HandLeft" type="RigidBody2D" parent="."]
+position = Vector2(-140, 0)
+collision_layer = 2
+collision_mask = 2
+mass = 0.1
+
+[node name="Icon" type="Sprite2D" parent="HandLeft"]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.42187503, 0.37499997)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandLeft"]
+z_index = 550
+shape = SubResource("RectangleShape2D_mtwow")
+
+[node name="HLTorso" type="PinJoint2D" parent="."]
+position = Vector2(-87, 0)
+rotation = 1.5707964
+node_a = NodePath("../HandLeft")
+node_b = NodePath("..")
+
+[node name="HandRight" type="RigidBody2D" parent="."]
+position = Vector2(139, 0)
+collision_layer = 4
+collision_mask = 4
+mass = 0.1
+
+[node name="Icon" type="Sprite2D" parent="HandRight"]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.42187503, 0.37499997)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandRight"]
+z_index = 550
+shape = SubResource("RectangleShape2D_mtwow")
+
+[node name="HRTorso" type="PinJoint2D" parent="."]
+position = Vector2(79, 0)
+rotation = -1.5707964
+node_a = NodePath("../HandRight")
+node_b = NodePath("..")
+
+[node name="FootLeft" type="RigidBody2D" parent="."]
+position = Vector2(-50, 112)
+collision_layer = 8
+collision_mask = 8
+contact_monitor = true
+max_contacts_reported = 1
+
+[node name="Icon" type="Sprite2D" parent="FootLeft"]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.42187503, 0.37499997)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootLeft"]
+z_index = 550
+shape = SubResource("RectangleShape2D_mtwow")
+
+[node name="GroundCheck" type="Area2D" parent="FootLeft"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootLeft/GroundCheck"]
+shape = SubResource("RectangleShape2D_btmjs")
+
+[node name="FLTorso" type="PinJoint2D" parent="."]
+position = Vector2(-50, 76)
+node_a = NodePath("../FootLeft")
+node_b = NodePath("..")
+
+[node name="FootRight" type="RigidBody2D" parent="."]
+position = Vector2(52, 113)
+collision_layer = 16
+collision_mask = 16
+contact_monitor = true
+max_contacts_reported = 1
+
+[node name="Icon" type="Sprite2D" parent="FootRight"]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.42187503, 0.37499997)
+texture = ExtResource("1_5qurf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootRight"]
+z_index = 550
+shape = SubResource("RectangleShape2D_mtwow")
+
+[node name="GroundCheck" type="Area2D" parent="FootRight"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootRight/GroundCheck"]
+shape = SubResource("RectangleShape2D_btmjs")
+
+[node name="FRTorso" type="PinJoint2D" parent="."]
+position = Vector2(52, 75)
+node_a = NodePath("../FootRight")
+node_b = NodePath("..")
+
+[connection signal="body_entered" from="FootLeft" to="." method="_on_foot_left_body_entered"]
+[connection signal="body_exited" from="FootLeft" to="." method="_on_foot_left_body_exited"]
+[connection signal="body_entered" from="FootRight" to="." method="_on_foot_right_body_entered"]
+[connection signal="body_exited" from="FootRight" to="." method="_on_foot_right_body_exited"]
